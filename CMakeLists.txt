@@ -5,7 +5,8 @@ project(micro-service)
 # Configure required libraries ...
 if(UNIX) # Darwing or Linux
     
-    find_package(Boost REQUIRED COMPONENTS system thread log program_options chrono)
+    #find_package(Boost REQUIRED COMPONENTS system thread log program_options chrono)
+    find_package(Boost REQUIRED COMPONENTS system thread program_options chrono)
     find_package(Threads REQUIRED)
 
     if(APPLE)
