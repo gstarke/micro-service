@@ -5,3 +5,6 @@
 !.vscode/c_cpp_properties.json
 !.vscode/extensions.json
 build/*
+/out/build/x64-Debug
+/libs/cpprestsdk
+/.vs
