@@ -21,21 +21,19 @@ public:
 		std::ostringstream buffer;
 		boost::hash<std::string> string_hash;
 		buffer << this->X << "," << this->Y;
-		return string_hash(temp.str());
+		return string_hash(buffer.str());
 	}
 
 	// String
-	std::ostream& operator<<(std::ostream& strm, const Coordinate& obj) {
-		std::ostringstream buffer;
-		buffer << this->X << "," << this->Y;
-		return strm << buffer.str();
-	}
+	friend std::ostream& operator<<(std::ostream& os, const Coordinate& obj);
 
 	// Equals Operator
-	bool operator==(Coordinate const& other) {
-		if (other == null)
-			return false;
-		else
-			return (this->X == other.X && this->Y == other.Y);
+	bool operator==(const Coordinate &obj) {
+		return (this->X == obj.X && this->Y == obj.Y);
 	}
 };
+
+std::ostream& operator<<(std::ostream& os, const Coordinate& obj){
+	os << obj.X << "," << obj.Y;
+	return os;
+}
