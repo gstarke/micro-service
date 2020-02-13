@@ -16,7 +16,7 @@ public:
 	const bool* get_damage() const;
 
 	// set_damage
-	void set_damage(const bool[] value);
+	void set_damage(const bool value[]);
 
 	// get_fleet_name
 	const std::string &get_fleet_name() const;
@@ -48,7 +48,7 @@ private:
 	ShipOrientation orientation_;
 
 	// damage_
-	bool[] damage_;
+	bool damage_[];
 
 	// id_
 	std::string id_;
