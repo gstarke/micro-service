@@ -49,7 +49,7 @@ add_executable(${PROJECT_NAME} ./source/main.cpp
                                ./source/microsvc_controller.cpp
                                ./source/foundation/network_utils.cpp
                                ./source/foundation/basic_controller.cpp
-			       ./source/models/Coordinate.cpp)
+			                   ./source/models/Coordinate.cpp)
 
 # headers search paths ...
 set(CPPRESTSDK_INCLUDE_DIR "./libs/cpprestsdk/Release/include")
