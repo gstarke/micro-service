@@ -30,7 +30,7 @@ const bool* Ship::get_damage() const
 }
 
 // set_damage
-void Ship::set_damage(const bool[] damage)
+void Ship::set_damage(const bool[] value)
 {	
 	std::copy(std::begin(damage), std::end(damage), std::begin(damage_));
 }
@@ -42,7 +42,7 @@ const std::string Ship::get_fleet_name() const
 }
 
 // set_fleet_name
-void Ship::set_fleet_name(const std::string fleet_name)
+void Ship::set_fleet_name(const std::string& value)
 {
 	this->fleet_name_.assign(fleet_name);
 }
