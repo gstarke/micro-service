@@ -1,19 +1,19 @@
-#include<list>
-
 #ifndef GAMEINFO_HPP_
 #define GAMEINFO_HPP_
+
+#include<list>
 
 // GameInfo
 class GameInfo {
 public:
 	// Players
-	list<PlayerInfo> Players;
+	std::list<PlayerInfo> players;
 
-	// BattleFieldWidth
-	int BattleFieldWidth;
+	// battle_field_width
+	int battle_field_width;
 
-	// BattleFieldHeight
-	int BattleFieldHeight;
+	// battle_field_height
+	int battle_field_height;
 }
 
 #endif // !GAMEINFO_HPP_

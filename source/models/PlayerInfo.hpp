@@ -6,10 +6,10 @@
 class PlayerInfo {
 public:
 	// StartCoordinate
-	Coordinate StartCoordinate;
+	Coordinate start_coordinate;
 
 	// EndCoordinate
-	Coordinate EndCoordinate;
+	Coordinate end_coordinate;
 };
 
 #endif // PLAYERINFO_HPP_

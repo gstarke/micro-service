@@ -6,14 +6,13 @@
 class InfoForPlayer {
 public:
 	// Players
-	list<PlayerInfo> Players;
+	std::list<PlayerInfo> players;
 
-	// BattleFieldWidth
-	int BattleFieldWidth;
+	// battle_field_width
+	int battle_field_width;
 
-	// BattleFieldHeight
-	int BattleFieldHeight;
+	// battle_field_height
+	int battle_field_height;
 };
 
 #endif // !_INFOFORPLAYER_HPP_
-

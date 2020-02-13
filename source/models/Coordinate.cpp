@@ -1,5 +1,6 @@
 #include "Coordinate.hpp"
 
+#include<iostream>
 #include<boost/functional/hash.hpp>
 
 // Constructor
@@ -18,7 +19,8 @@ int Coordinate::hashCode() {
 }
 
 // String
-std::ostream& operator<<(std::ostream& os, const Coordinate& obj){
+std::ostream& Coordinate::operator<<(std::ostream& os, const Coordinate& obj)
+{
 	os << obj.X << "," << obj.Y;
 	return os;
 }

@@ -62,4 +62,3 @@ private:
 };
 
 #endif // !SHIP_HPP_
-
