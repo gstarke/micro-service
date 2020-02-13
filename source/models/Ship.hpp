@@ -13,7 +13,7 @@ enum ShipOrientation {
 class Ship {
 public:
 	// get_damage
-	const bool[] get_damage() const;
+	const bool* get_damage() const;
 
 	// set_damage
 	void set_damage(const bool[] value);

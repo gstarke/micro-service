@@ -24,7 +24,7 @@ void Ship::InitializeDamage() {
 }
 
 // get_damage
-const bool[] Ship::get_damage() const
+const bool* Ship::get_damage() const
 {
 	return this->damage_;
 }
