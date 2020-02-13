@@ -16,7 +16,7 @@ Ship::Ship(std::string fleet_name) {
 
 // InitializeDamage
 void Ship::InitializeDamage() {
-	this->damage_ = new bool[this->length];
+	this->damage_ = new bool[this->get_length()];
 	for (int i = 0; i < ArraySize(this->damage_); i++)
 	{
 		this->damage_[i] == false;

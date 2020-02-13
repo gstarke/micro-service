@@ -32,17 +32,17 @@ public:
 
 protected:
 	// length
-	virtual int length;
+	const virtual int get_length() const;
 
 	// InitializeDamage
 	void InitializeDamage();
 
 private:
 	// position_absolute_
-	Coordinate position_absolute_ = new Coordinate(0, 0);
+	Coordinate position_absolute_(0, 0);
 
 	// position_relative_
-	Coordinate position_relative_ = new Coordinate(0, 0);
+	Coordinate position_relative_(0, 0);
 
 	// orientation_
 	ShipOrientation orientation_;
