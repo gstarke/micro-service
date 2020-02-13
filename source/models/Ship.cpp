@@ -18,19 +18,19 @@ Ship::Ship(std::string fleet_name) {
 
 // InitializeDamage
 void Ship::InitializeDamage() {
-	this->damage_ = std::vector<int>(this->get_length(), false);
+	this->damage_ = std::vector<bool>(this->get_length(), false);
 }
 
 // get_damage
-const std::vector<int>& Ship::get_damage() const
+const std::vector<bool>& Ship::get_damage() const
 {
 	return this->damage_;
 }
 
 // set_damage
-void Ship::set_damage(const std::vector<int>& value)
+void Ship::set_damage(const std::vector<bool>& value)
 {	
-	this->damage_ = std::vector<int>(value);
+	this->damage_ = std::vector<bool>(value);
 }
 
 // get_fleet_name
