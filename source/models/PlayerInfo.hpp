@@ -1,7 +1,7 @@
-#include "Coordinate.hpp"
-
 #ifndef PLAYERINFO_HPP_
 #define PLAYERINFO_HPP_
+
+#include "Coordinate.hpp"
 
 class PlayerInfo {
 public:
