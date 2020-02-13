@@ -4,11 +4,7 @@
 #include<boost/functional/hash.hpp>
 
 // Constructor
-Coordinate::Coordinate(int x, int y)
-{
-	this->X = x;
-	this->Y = y;
-}
+Coordinate::Coordinate(int x, int y) : X(x), Y(y) {}
 
 // Hashcode
 int Coordinate::hashCode() {
