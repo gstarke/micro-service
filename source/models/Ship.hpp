@@ -50,14 +50,14 @@ private:
 	// id_
 	std::string id_;
 
+	// damage_
+	bool* damage;
+
 	// fleet_name_
 	std::string fleet_name_;
 
 	// Constructor
 	Ship(std::string fleet_name);
-
-	// damage_
-	bool damage_[];
 };
 
 #endif // !SHIP_HPP_
