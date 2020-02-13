@@ -1,6 +1,8 @@
 #ifndef COORDINATE_HPP_
 #define COORDINATE_HPP_
 
+#include<iostream>
+
 // Coordinate class
 class Coordinate {
 public:
