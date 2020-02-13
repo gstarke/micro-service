@@ -47,9 +47,6 @@ private:
 	// orientation_
 	ShipOrientation orientation_;
 
-	// damage_
-	bool damage_[];
-
 	// id_
 	std::string id_;
 
@@ -59,6 +56,8 @@ private:
 	// Constructor
 	Ship(std::string fleet_name);
 
+	// damage_
+	bool damage_[];
 };
 
 #endif // !SHIP_HPP_
