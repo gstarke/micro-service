@@ -13,10 +13,10 @@ enum ShipOrientation {
 class Ship {
 public:
 	// get_damage
-	const bool* get_damage() const;
+	const std::vector<bool>& get_damage() const;
 
 	// set_damage
-	void set_damage(const bool value[]);
+	void set_damage(const std::vector<bool>& value);
 
 	// get_fleet_name
 	const std::string &get_fleet_name() const;
@@ -51,7 +51,7 @@ private:
 	std::string id_;
 
 	// damage_
-	bool* damage_;
+	std::vector<bool> damage_;
 
 	// fleet_name_
 	std::string fleet_name_;

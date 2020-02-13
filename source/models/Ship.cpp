@@ -1,3 +1,5 @@
+#include<vector>
+
 #include "Ship.hpp"
 #include "Fleet.hpp"
 
@@ -16,23 +18,19 @@ Ship::Ship(std::string fleet_name) {
 
 // InitializeDamage
 void Ship::InitializeDamage() {
-	this->damage_ = new bool[this->get_length()];
-	for (int i = 0; i < ArraySize(this->damage_); i++)
-	{
-		this->damage_[i] = false;
-	}
+	this->damage_ = std::vector<int>(this->get_length(), false);
 }
 
 // get_damage
-const bool* Ship::get_damage() const
+const std::vector<int>& Ship::get_damage() const
 {
 	return this->damage_;
 }
 
 // set_damage
-void Ship::set_damage(const bool value[])
+void Ship::set_damage(const std::vector<int>& value)
 {	
-	std::copy(std::begin(value), std::end(value), std::begin(damage_));
+	this->damage_ = std::vector<int>(value);
 }
 
 // get_fleet_name
