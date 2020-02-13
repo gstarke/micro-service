@@ -4,7 +4,7 @@
 class Fleet {
 public:
 	// REGION_SIZE
-	const int kRegionSize = 20;
+	static const int kRegionSize = 20;
 
 protected:
 

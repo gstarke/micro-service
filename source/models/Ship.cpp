@@ -37,7 +37,7 @@ void Ship::set_damage(const bool value[])
 }
 
 // get_fleet_name
-const std::string Ship::get_fleet_name() const
+const std::string& Ship::get_fleet_name() const
 {
 	return this->fleet_name_;
 }
