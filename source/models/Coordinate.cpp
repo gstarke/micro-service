@@ -19,7 +19,7 @@ int Coordinate::hashCode() {
 }
 
 // String
-std::ostream& Coordinate::operator<<(std::ostream& os, const Coordinate& obj)
+std::ostream& operator<<(std::ostream& os, const Coordinate& obj)
 {
 	os << obj.X << "," << obj.Y;
 	return os;

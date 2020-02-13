@@ -19,7 +19,7 @@ public:
 	int hashCode();
 
 	// String
-	std::ostream& operator<<(std::ostream& os, const Coordinate& obj);
+	friend std::ostream& operator<<(std::ostream& os, const Coordinate& obj);
 
 	// Equals Operator
 	bool operator==(const Coordinate& obj);
