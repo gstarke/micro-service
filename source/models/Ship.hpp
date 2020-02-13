@@ -22,13 +22,13 @@ public:
 	const std::string &get_fleet_name() const;
 
 	// set_fleet_name
-	void set_fleet_name(const std::string &value);
+	void set_fleet_name(const std::string& value);
 
 	// get_position_relative
-	const Coordinate &get_position_relative() const;
+	const Coordinate& get_position_relative() const;
 
 	// set_position_relative
-	void set_position_relative(const Coordinate &value);
+	void set_position_relative(const Coordinate& value);
 
 protected:
 	// length

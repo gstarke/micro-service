@@ -36,13 +36,13 @@ void Ship::set_damage(const bool[] damage)
 }
 
 // get_fleet_name
-std::string Ship::get_fleet_name() const
+const std::string Ship::get_fleet_name() const
 {
 	return this->fleet_name_;
 }
 
 // set_fleet_name
-void Ship::set_fleet_name(std::string fleet_name)
+void Ship::set_fleet_name(const std::string fleet_name)
 {
 	this->fleet_name_.assign(fleet_name);
 }
