@@ -51,7 +51,7 @@ private:
 	std::string id_;
 
 	// damage_
-	bool* damage;
+	bool* damage_;
 
 	// fleet_name_
 	std::string fleet_name_;
