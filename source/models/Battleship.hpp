@@ -23,6 +23,13 @@ public:
 		return false;
 	}
 
+	// String
+	friend std::ostream& operator<<(std::ostream& os, const Battleship& obj)
+	{
+		os << "Battleship" << obj.get_position_absolute() << obj.get_orientation();
+		return os;
+	}
+
 protected:
 
 private:

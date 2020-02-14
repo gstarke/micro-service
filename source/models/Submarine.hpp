@@ -23,6 +23,13 @@ public:
 		return true;
 	}
 
+	// String
+	friend std::ostream& operator<<(std::ostream& os, const Destroyer& obj)
+	{
+		os << "Submarine" << obj.get_position_absolute() << obj.get_orientation();
+		return os;
+	}
+
 protected:
 
 private:
