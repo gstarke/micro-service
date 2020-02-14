@@ -11,8 +11,7 @@ std::size_t ArraySize(const T(&arr)[sz])
 }
 
 // Constructor
-Ship::Ship(std::string fleet_name) {
-	this->fleet_name_.assign(fleet_name);
+Ship::Ship(std::string fleet_name) : fleet_name_(fleet_name) {
 	InitializeDamage();
 }
 

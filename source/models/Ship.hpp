@@ -35,7 +35,7 @@ public:
 
 protected:
 	// length
-	const virtual int get_length() const;
+	const virtual int get_length() const = 0;
 
 	// InitializeDamage
 	void InitializeDamage();
