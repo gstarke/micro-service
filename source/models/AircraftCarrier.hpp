@@ -23,6 +23,13 @@ public:
 		return true;
 	}
 
+	// String
+	std::ostream& operator<<(std::ostream& os, const AircraftCarrier& obj)
+	{
+		os << "AircraftCarrier" << obj.get_position_absolute() << obj.get_orientation();
+		return os;
+	}
+
 protected:
 
 private:
