@@ -41,7 +41,9 @@
 #include "models/InfoForPlayer.hpp"
 #include "models/Message.hpp"
 #include "models/PlayerInfo.hpp"
+#include "models/PTBoat.hpp"
 #include "models/Ship.hpp"
+#include "models/Submarine.hpp"
 // end battle ship related
 
 using namespace web;

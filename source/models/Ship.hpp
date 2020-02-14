@@ -33,6 +33,42 @@ public:
 	// set_position_relative
 	void set_position_relative(const Coordinate& value);
 
+	// get_position_absolute
+	const Coordinate& get_position_absolute() const;
+
+	// set_position_absolute
+	void set_position_absolute(const Coordinate& value);
+
+	// get_id
+	const std::string& get_id() const;
+
+	// set_id
+	void set_id(const std::string& value);
+
+	// get_orientation
+	const ShipOrientation get_orientation() const;
+
+	// set_orientation
+	void set_orientation(const ShipOrientation value);
+
+	// is_sunk
+	const bool is_sunk() const;
+
+	// String
+	friend std::ostream& operator<<(std::ostream& os, const AircraftCarrier& obj);
+
+	// String
+	friend std::ostream& operator<<(std::ostream& os, const Battleship& obj);
+
+	// String
+	friend std::ostream& operator<<(std::ostream& os, const Destroyer& obj);
+
+	// String
+	friend std::ostream& operator<<(std::ostream& os, const PTBoat& obj);
+
+	// String
+	friend std::ostream& operator<<(std::ostream& os, const Submarine& obj);
+
 	// length
 	const virtual int get_length() const = 0;
 
@@ -56,11 +92,11 @@ private:
 	// orientation_
 	ShipOrientation orientation_;
 
-	// id_
-	std::string id_;
-
 	// damage_
 	std::vector<bool> damage_;
+
+	// id_
+	std::string id_;
 
 	// fleet_name_
 	std::string fleet_name_;

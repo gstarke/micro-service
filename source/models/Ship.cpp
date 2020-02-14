@@ -3,6 +3,12 @@
 #include "Ship.hpp"
 #include "Fleet.hpp"
 
+#include "AircraftCarrier.hpp"
+#include "Battleship.hpp"
+#include "Destroyer.hpp"
+#include "PTBoat.hpp"
+#include "Submarine.hpp"
+
 // ArraySize
 template<typename T, std::size_t sz>
 std::size_t ArraySize(const T(&arr)[sz])
@@ -10,14 +16,21 @@ std::size_t ArraySize(const T(&arr)[sz])
 	return sz;
 }
 
+std::ostream& operator<<(std::ostream& out, const ShipOrientation value) {
+	static std::map<Errors, std::string> strings;
+	if (strings.size() == 0) {
+#define INSERT_ELEMENT(p) strings[p] = #p
+		INSERT_ELEMENT(Vertical);
+		INSERT_ELEMENT(Horizontal);
+#undef INSERT_ELEMENT
+	}
+
+	return out << strings[value];
+}
+
 // Constructor
 Ship::Ship(std::string fleet_name) : fleet_name_(fleet_name) {
 	InitializeDamage();
-}
-
-// InitializeDamage
-void Ship::InitializeDamage() {
-	this->damage_ = std::vector<bool>(this->get_length(), false);
 }
 
 // get_damage
@@ -62,4 +75,91 @@ void Ship::set_position_relative(const Coordinate& value)
 	{
 		throw std::out_of_range("Relative Y coordinate cannot be less than 0 or greater than 9 since it is relative to fleet's absolute location.");
 	}
+}
+
+// get_position_absolute
+const Coordinate& Ship::get_position_absolute() const
+{
+	return this->position_absolute_;
+}
+
+// set_position_absolute
+void Ship::set_position_absolute(const Coordinate& value)
+{
+	this->position_absolute_ = value;
+}
+
+// get_id
+const std::string& Ship::get_id() const
+{
+	return this->id_;
+}
+
+// set_id
+void Ship::set_id(const std::string& value)
+{
+	this->id_.assign(value);
+}
+
+// get_orientation
+const ShipOrientation Ship::get_orientation() const
+{
+	return this->orientation_;
+}
+
+// set_orientation
+void Ship::set_orientation(const ShipOrientation value)
+{
+	this->orientation_ = value;
+}
+
+// InitializeDamage
+void Ship::InitializeDamage() {
+	this->damage_ = std::vector<bool>(this->get_length(), false);
+}
+
+// is_sunk
+const bool is_sunk() const {
+	for (std::vector<bool>::iterator it = this->damage_.begin(); it != this->damage_.end(); ++it) {
+		if (!*it) {
+			return false;
+		}
+	}
+	return true;
+}
+
+// String
+std::ostream& operator<<(std::ostream& os, const AircraftCarrier& obj)
+{
+	os << "AircraftCarrier" << obj.position_absolute_ << obj.orientation_;
+	return os;
+}
+
+
+// String
+std::ostream& operator<<(std::ostream& os, const Battleship& obj)
+{
+	os << "Battleship" << obj.position_absolute_ << obj.orientation_;
+	return os;
+}
+
+// String
+std::ostream& operator<<(std::ostream& os, const Destroyer& obj)
+{
+	os << "Destroyer" << obj.position_absolute_ << obj.orientation_;
+	return os;
+}
+
+// String
+std::ostream& operator<<(std::ostream& os, const PTBoat& obj)
+{
+	os << "PTBoat" << obj.position_absolute_ << obj.orientation_;
+	return os;
+}
+
+// String
+std::ostream& operator<<(std::ostream& os, const Submarine& obj)
+{
+	os << "Submarine" << obj.position_absolute_ << obj.orientation_;
+	return os;
 }
