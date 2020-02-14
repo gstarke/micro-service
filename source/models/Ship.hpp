@@ -1,7 +1,15 @@
 #ifndef SHIP_HPP_
 #define SHIP_HPP_
 
+#include<vector>
+
 #include "Coordinate.hpp"
+#include "Fleet.hpp"
+#include "AircraftCarrier.hpp"
+#include "Battleship.hpp"
+#include "Destroyer.hpp"
+#include "PTBoat.hpp"
+#include "Submarine.hpp"
 
 // ShipOrientation
 enum ShipOrientation {
