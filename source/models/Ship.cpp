@@ -118,3 +118,10 @@ bool Ship::is_sunk() {
 	}
 	return true;
 }
+
+void Ship::ExecuteOrder(Order order)
+{
+	if (is_sunk()) {
+		return;
+	}
+}

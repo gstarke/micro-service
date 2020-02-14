@@ -6,6 +6,7 @@
 
 #include "Coordinate.hpp"
 #include "Fleet.hpp"
+#include "Order.hpp"
 
 // ShipOrientation
 enum ShipOrientation {
@@ -57,6 +58,9 @@ public:
 
 	// is_sunk
 	bool is_sunk();
+
+	// ExecuteOrder
+	void ExecuteOrder(Order order);
 
 	// length
 	const virtual int get_length() const = 0;

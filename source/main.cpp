@@ -40,6 +40,7 @@
 #include "models/GameInfo.hpp"
 #include "models/InfoForPlayer.hpp"
 #include "models/Message.hpp"
+#include "models/Order.hpp"
 #include "models/PlayerInfo.hpp"
 #include "models/PTBoat.hpp"
 #include "models/Ship.hpp"
