@@ -1,5 +1,5 @@
 #ifndef _INFOFORPLAYER_HPP_
-#define_INFOFORPLAYER_HPP_
+#define _INFOFORPLAYER_HPP_
 
 #include<list>
 

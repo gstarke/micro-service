@@ -32,13 +32,13 @@
 #include "microsvc_controller.hpp"
 
 // battle ship related
-#include "models\AircraftCarrier.hpp"
-#include "models\Coordinate.hpp"
-#include "models\Fleet.hpp"
-#include "models\GameInfo.hpp"
-#include "models\InfoForPlayer.hpp"
-#include "models\PlayerInfo.hpp"
-#include "models\Ship.hpp"
+#include "models/AircraftCarrier.hpp"
+#include "models/Coordinate.hpp"
+#include "models/Fleet.hpp"
+#include "models/GameInfo.hpp"
+#include "models/InfoForPlayer.hpp"
+#include "models/PlayerInfo.hpp"
+#include "models/Ship.hpp"
 // end battle ship related
 
 using namespace web;

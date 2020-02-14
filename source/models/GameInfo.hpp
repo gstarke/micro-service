@@ -3,6 +3,8 @@
 
 #include<list>
 
+#include "PlayerInfo.hpp"
+
 // GameInfo
 class GameInfo {
 public:
@@ -14,6 +16,6 @@ public:
 
 	// battle_field_height
 	int battle_field_height;
-}
+};
 
 #endif // !GAMEINFO_HPP_
