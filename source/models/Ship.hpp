@@ -2,6 +2,7 @@
 #define SHIP_HPP_
 
 #include<vector>
+#include<map>
 
 #include "Coordinate.hpp"
 #include "Fleet.hpp"
@@ -55,7 +56,7 @@ public:
 	void set_orientation(const ShipOrientation value);
 
 	// is_sunk
-	const bool is_sunk() const;
+	bool is_sunk();
 
 	// length
 	const virtual int get_length() const = 0;

@@ -8,7 +8,7 @@ std::size_t ArraySize(const T(&arr)[sz])
 }
 
 std::ostream& operator<<(std::ostream& out, const ShipOrientation value) {
-	static std::map<Errors, std::string> strings;
+	static std::map<ShipOrientation, std::string> strings;
 	if (strings.size() == 0) {
 #define INSERT_ELEMENT(p) strings[p] = #p
 		INSERT_ELEMENT(Vertical);
@@ -110,7 +110,7 @@ void Ship::InitializeDamage() {
 }
 
 // is_sunk
-const bool is_sunk() const {
+bool Ship::is_sunk() {
 	for (std::vector<bool>::iterator it = this->damage_.begin(); it != this->damage_.end(); ++it) {
 		if (!*it) {
 			return false;
