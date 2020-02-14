@@ -24,7 +24,7 @@ public:
 	}
 
 	// String
-	friend std::ostream& operator<<(std::ostream& os, const Destroyer& obj)
+	friend std::ostream& operator<<(std::ostream& os, const Submarine& obj)
 	{
 		os << "Submarine" << obj.get_position_absolute() << obj.get_orientation();
 		return os;
