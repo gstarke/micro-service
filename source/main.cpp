@@ -33,7 +33,9 @@
 
 // battle ship related
 #include "models/AircraftCarrier.hpp"
+#include "models/Battleship.hpp"
 #include "models/Coordinate.hpp"
+#include "models/Destroyer.hpp"
 #include "models/Fleet.hpp"
 #include "models/GameInfo.hpp"
 #include "models/InfoForPlayer.hpp"

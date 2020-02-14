@@ -33,6 +33,9 @@ public:
 	// set_position_relative
 	void set_position_relative(const Coordinate& value);
 
+	// length
+	const virtual int get_length() const = 0;
+
 	// maximum_pending_orders
 	const virtual int maximum_pending_orders() const = 0;
 
@@ -40,9 +43,6 @@ public:
 	const virtual bool can_perform_recon() const = 0;
 
 protected:
-	// length
-	const virtual int get_length() const = 0;
-
 	// InitializeDamage
 	void InitializeDamage();
 
