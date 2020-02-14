@@ -39,6 +39,7 @@
 #include "models/Fleet.hpp"
 #include "models/GameInfo.hpp"
 #include "models/InfoForPlayer.hpp"
+#include "models/Message.hpp"
 #include "models/PlayerInfo.hpp"
 #include "models/Ship.hpp"
 // end battle ship related
