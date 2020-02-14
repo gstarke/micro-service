@@ -5,11 +5,6 @@
 
 #include "Coordinate.hpp"
 #include "Fleet.hpp"
-#include "AircraftCarrier.hpp"
-#include "Battleship.hpp"
-#include "Destroyer.hpp"
-#include "PTBoat.hpp"
-#include "Submarine.hpp"
 
 // ShipOrientation
 enum ShipOrientation {
@@ -61,21 +56,6 @@ public:
 
 	// is_sunk
 	const bool is_sunk() const;
-
-	// String
-	friend std::ostream& operator<<(std::ostream& os, const AircraftCarrier& obj);
-
-	// String
-	friend std::ostream& operator<<(std::ostream& os, const Battleship& obj);
-
-	// String
-	friend std::ostream& operator<<(std::ostream& os, const Destroyer& obj);
-
-	// String
-	friend std::ostream& operator<<(std::ostream& os, const PTBoat& obj);
-
-	// String
-	friend std::ostream& operator<<(std::ostream& os, const Submarine& obj);
 
 	// length
 	const virtual int get_length() const = 0;

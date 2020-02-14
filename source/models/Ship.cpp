@@ -118,39 +118,3 @@ const bool is_sunk() const {
 	}
 	return true;
 }
-
-// String
-std::ostream& operator<<(std::ostream& os, const AircraftCarrier& obj)
-{
-	os << "AircraftCarrier" << obj.position_absolute_ << obj.orientation_;
-	return os;
-}
-
-
-// String
-std::ostream& operator<<(std::ostream& os, const Battleship& obj)
-{
-	os << "Battleship" << obj.position_absolute_ << obj.orientation_;
-	return os;
-}
-
-// String
-std::ostream& operator<<(std::ostream& os, const Destroyer& obj)
-{
-	os << "Destroyer" << obj.position_absolute_ << obj.orientation_;
-	return os;
-}
-
-// String
-std::ostream& operator<<(std::ostream& os, const PTBoat& obj)
-{
-	os << "PTBoat" << obj.position_absolute_ << obj.orientation_;
-	return os;
-}
-
-// String
-std::ostream& operator<<(std::ostream& os, const Submarine& obj)
-{
-	os << "Submarine" << obj.position_absolute_ << obj.orientation_;
-	return os;
-}
