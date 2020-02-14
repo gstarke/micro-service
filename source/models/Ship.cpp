@@ -55,11 +55,11 @@ const Coordinate& Ship::get_position_relative() const
 void Ship::set_position_relative(const Coordinate& value)
 {
 	this->position_relative_ = value;
-	if (this->position_relative_.X < 0 || this->position_relative_.X > Fleet.kRegionSize)
+	if (this->position_relative_.X < 0 || this->position_relative_.X > Fleet::kRegionSize)
 	{
 		throw std::out_of_range("Relative X coordinate cannot be less than 0 or greater than 9 since it is relative to fleet's absolute location.");
 	}
-	if (this->position_relative_.Y < 0 || this->position_relative_.Y > Fleet.kRegionSize)
+	if (this->position_relative_.Y < 0 || this->position_relative_.Y > Fleet::kRegionSize)
 	{
 		throw std::out_of_range("Relative Y coordinate cannot be less than 0 or greater than 9 since it is relative to fleet's absolute location.");
 	}
