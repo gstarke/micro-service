@@ -12,6 +12,9 @@ enum ShipOrientation {
 // Ship
 class Ship {
 public:
+	// Constructor
+	Ship(std::string fleet_name);
+
 	// get_damage
 	const std::vector<bool>& get_damage() const;
 
@@ -55,9 +58,6 @@ private:
 
 	// fleet_name_
 	std::string fleet_name_;
-
-	// Constructor
-	Ship(std::string fleet_name);
 };
 
 #endif // !SHIP_HPP_
