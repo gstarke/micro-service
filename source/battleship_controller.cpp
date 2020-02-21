@@ -57,20 +57,35 @@ void BattleshipController::initRestOpHandlers() {
 
 void BattleshipController::handleGet(http_request message) {
 
-    Fleet fleet = Fleet()
+    Fleet fleet = Fleet("Task Unit Bruiser");
 
-    auto path = requestPath(message);
-    if (!path.empty()) {
-        if (path[0] == "service" && path[1] == "test") {
-            auto response = json::value::object();
-            response["version"] = json::value::string("0.1.1");
-            response["status"] = json::value::string("ready!");
-            message.reply(status_codes::OK, response);
-        }
-    }
-    else {
-        message.reply(status_codes::NotFound);
-    }
+    fleet.get_aircraft_carrier().set_position_relative(Coordinate(0, 0));
+    fleet.get_aircraft_carrier().set_orientation(ShipOrientation::Horizontal);
+
+    fleet.get_battleship().set_position_relative(Coordinate(5, 8));
+    fleet.get_battleship().set_orientation(ShipOrientation::Vertical);
+
+    fleet.get_destroyer().set_position_relative(Coordinate(6, 4));
+    fleet.get_destroyer().set_orientation(ShipOrientation::Horizontal);
+
+    fleet.get_pt_boat().set_position_relative(Coordinate(1, 8));
+    fleet.get_pt_boat().set_orientation(ShipOrientation::Horizontal);
+
+    fleet.get_submarine().set_position_relative(Coordinate(2, 2));
+    fleet.get_submarine().set_orientation(ShipOrientation::Horizontal);
+
+    //auto path = requestPath(message);
+    //if (!path.empty()) {
+    //    if (path[0] == "service" && path[1] == "test") {
+    //        auto response = json::value::object();
+    //        response["version"] = json::value::string("0.1.1");
+    //        response["status"] = json::value::string("ready!");
+    //        message.reply(status_codes::OK, response);
+    //    }
+    //}
+    //else {
+    //    message.reply(status_codes::NotFound);
+    //}
 }
 
 void BattleshipController::handlePatch(http_request message) {

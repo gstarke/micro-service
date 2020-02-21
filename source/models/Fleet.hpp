@@ -93,7 +93,7 @@ private:
 	int region_y_;
 
 	// aircraft_carrier_
-	AircraftCarrier aircraft_carrier_;
+	AircraftCarrier		;
 
 	// battleship_
 	Battleship battleship_;
