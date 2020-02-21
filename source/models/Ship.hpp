@@ -56,8 +56,8 @@ public:
 	// set_orientation
 	void set_orientation(const ShipOrientation value);
 
-	// is_sunk
-	bool is_sunk();
+	// IsSunk
+	bool IsSunk();
 
 	// ExecuteOrder
 	void ExecuteOrder(Order order);

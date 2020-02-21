@@ -109,8 +109,8 @@ void Ship::InitializeDamage() {
 	this->damage_ = std::vector<bool>(this->get_length(), false);
 }
 
-// is_sunk
-bool Ship::is_sunk() {
+// IsSunk
+bool Ship::IsSunk() {
 	for (std::vector<bool>::iterator it = this->damage_.begin(); it != this->damage_.end(); ++it) {
 		if (!*it) {
 			return false;
@@ -119,9 +119,10 @@ bool Ship::is_sunk() {
 	return true;
 }
 
+// ExecuteOrder
 void Ship::ExecuteOrder(Order order)
 {
-	if (is_sunk()) {
+	if (IsSunk()) {
 		return;
 	}
 }
