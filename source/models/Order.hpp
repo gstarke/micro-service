@@ -37,7 +37,11 @@ public:
     std::string from;
 
     // String
-    friend std::ostream& operator<<(std::ostream& os, const Order& obj);
+    friend std::ostream& operator<<(std::ostream& os, const Order& obj)
+    {
+        os << "Order -- Type: " << obj.type << ", Coordinate: " << obj.coordinate << ", Data: " << obj.data << ", Result: " << obj.result;
+        return os;
+    }
 
 
 protected:
@@ -45,12 +49,5 @@ protected:
 private:
 
 };
-
-// String
-std::ostream& operator<<(std::ostream& os, const Order& obj)
-{
-    os << "Order -- Type: " << obj.type << ", Coordinate: " << obj.coordinate << ", Data: " << obj.data << ", Result: " << obj.result;
-    return os;
-}
 
 #endif // !ORDER_HPP_
